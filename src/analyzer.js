@@ -1,22 +1,42 @@
-const analyzer = {  
-  getWordCount: (text) => {
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+// analyzer.js
+
+const analyzer = {
+  getWordCount(text) {
+    const words = text.trim().split(/\s+/);
+    return words.length;
   },
-  getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+
+  getCharacterCount(text) {
+    return text.length;
   },
-  getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+
+  getCharacterCountExcludingSpaces(text) {
+    const textWithoutSpaces = text.replace(/\s/g, '');
+    return textWithoutSpaces.length;
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+
+  getNumberCount(text) {
+    const numbersArray = text.match(/\d+/g);
+    return numbersArray ? numbersArray.length : 0;
   },
-  getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+
+  getNumberSum(text) {
+    const numbersArray = text.match(/\d+/g);
+    return numbersArray ? numbersArray.reduce((acc, val) => acc + parseInt(val), 0) : 0;
   },
-  getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+
+  getAverageWordLength(text) {
+    const words = text.trim().split(/\s+/);
+    const wordCount = words.length;
+    const totalWordLength = words.reduce((acc, word) => acc + word.length, 0);
+    const wordLengthAverage = wordCount === 0 ? 0 : (totalWordLength / wordCount).toFixed(2);
+    return parseFloat(wordLengthAverage); // Parse to float to ensure 2 decimal places.
   },
 };
 
+
+
+
 export default analyzer;
+
+
