@@ -33,4 +33,5 @@ textarea.addEventListener("input", updateMetrics);
 resetButton.addEventListener("click", () => {
   textarea.value = "";
   updateMetrics();
-});
+}
+);

@@ -2,35 +2,79 @@
 
 const analyzer = {
   getWordCount(text) {
-    const words = text.trim().split(/\s+/);
-    return words.length;
+    if (text) {
+      const words = text.trim().split(/\s+/);
+      return words.length;
+    } else {
+      return 0;
+    }
   },
 
   getCharacterCount(text) {
-    return text.length;
+    if (text) {
+      return text.length;
+    } else {
+      return 0;
+    }
   },
 
   getCharacterCountExcludingSpaces(text) {
-    const textWithoutSpaces = text.replace(/\s/g, '');
-    return textWithoutSpaces.length;
+    if (text) {
+      let count = 0;
+      for (let i = 0; i < text.length; i++) {
+        if (text[i] !== ' ') {
+          count++;
+        }
+      }
+      return count;
+    } else {
+      return 0;
+    }
   },
 
   getNumberCount(text) {
-    const numbersArray = text.match(/\d+/g);
-    return numbersArray ? numbersArray.length : 0;
+    if (text) {
+      const numbersArray = text.match(/\d+/g);
+      return numbersArray ? numbersArray.length : 0;
+    } else {
+      return 0;
+    }
   },
 
   getNumberSum(text) {
-    const numbersArray = text.match(/\d+/g);
-    return numbersArray ? numbersArray.reduce((acc, val) => acc + parseInt(val), 0) : 0;
+    if (text) {
+      const numbersArray = text.match(/\d+/g);
+      if (numbersArray) {
+        let sum = 0;
+        for (let i = 0; i < numbersArray.length; i++) {
+          sum += parseFloat(numbersArray[i]);
+        }
+        return sum;
+      } else {
+        return 0;
+      }
+    } else {
+      return 0;
+    }
   },
 
   getAverageWordLength(text) {
-    const words = text.trim().split(/\s+/);
-    const wordCount = words.length;
-    const totalWordLength = words.reduce((acc, word) => acc + word.length, 0);
-    const wordLengthAverage = wordCount === 0 ? 0 : (totalWordLength / wordCount).toFixed(2);
-    return parseFloat(wordLengthAverage); // Parse to float to ensure 2 decimal places.
+    if (text) {
+      const words = text.trim().split(/\s+/);
+      const wordCount = words.length;
+      if (wordCount > 0) {
+        let totalWordLength = 0;
+        for (let i = 0; i < wordCount; i++) {
+          totalWordLength += words[i].length;
+        }
+        const wordLengthAverage = (totalWordLength / wordCount).toFixed(2);
+        return parseFloat(wordLengthAverage);
+      } else {
+        return 0;
+      }
+    } else {
+      return 0;
+    }
   },
 };
 
@@ -38,5 +82,4 @@ const analyzer = {
 
 
 export default analyzer;
-
 
