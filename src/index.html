@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Esta línea indica que estamos utilizando HTML5 -->
+
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Analizador de texto</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8"/> <!-- Configuración de caracteres especiales -->
+    <title>Analizador de texto</title> <!-- Título de la página en la barra de navegación -->
+    <link rel="stylesheet" href="style.css"/> <!-- Enlace a un archivo CSS externo para estilos -->
   </head>
 
   <body>
     <header>
-      <h1>Analizador de Texto</h1>
+      <!-- Encabezado de la página -->
+      <img src="/text-analyzer/DEV012-text-analyzer/src/img/Diseño sin título (1).svg" alt="logo Analizador de Texto">
+      <!-- Imagen del logo del Analizador de Texto con una descripción alternativa -->
+      <h1>Analizador de Texto</h1> <!-- Título principal de la página -->
     </header>
 
-    <textarea name="user-input"placeholder="Ingrese su texto aquí"></textarea>
+    <textarea name="user-input" placeholder="Ingrese su texto aquí"></textarea>
+    <!-- Área de texto donde los usuarios pueden ingresar su texto -->
+
     <ul>
+      <!-- Lista no ordenada para mostrar diversas métricas -->
       <li class="metric-item" data-testid="word-count">
         Recuento de palabras:
       </li>
@@ -23,10 +30,10 @@
         Recuento de caracteres (sin espacios):
       </li>
       <li class="metric-item" data-testid="number-count">
-        Recuento de números:
+        Recuento de números: 
       </li>
       <li class="metric-item" data-testid="number-sum">
-        Suma total de números:
+        Suma total de números: 
       </li>
       <li class="metric-item" data-testid="word-length-average">
         Longitud media de palabras:
@@ -34,9 +41,15 @@
     </ul>
 
     <button id="reset-button">Limpiar</button>
+    <!-- Botón utilizado para borrar el contenido del área de texto -->
+
     <footer>
-      <p>Desarrollado por [Sara Adela Saldarriaga Romero]</p>
+      <!-- Pie de página -->
+      <p>Desarrollado por Sara Adela Saldarriaga Romero</p>
+      <!-- Información del desarrollador -->
     </footer>
+
     <script src="index.js" type="module"></script>
+    <!-- Enlace al archivo JavaScript que proporciona la funcionalidad -->
   </body>
 </html>

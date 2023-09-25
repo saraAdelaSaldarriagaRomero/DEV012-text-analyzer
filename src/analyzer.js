@@ -1,16 +1,44 @@
 // analyzer.js
 
+// Creamos un objeto llamado 'analyzer'
 const analyzer = {
+
+  // Método para contar palabras en un texto
   getWordCount(text) {
-    if (text) {
-      const words = text.trim().split(/\s+/);
-      return words.length;
-    } else {
+    // Elimina todos los números del texto
+    let array = text.replace(/[0-9]/g, "");
+    // Elimina espacios en blanco al inicio y al final del texto
+    array = array.trim();
+
+    // Si el texto está vacío, retorna 0
+    if (array === "") {
       return 0;
+    } else {
+      // Contador de palabras
+      let wordCount = 0;
+      // Variable que indica si estamos dentro de una palabra
+      let inWord = false;
+
+      // Iteramos sobre el texto
+      for (let i = 0; i < array.length; i++) {
+        const character = array[i];
+        if (/\s/.test(character)) {
+          // Si encontramos un espacio, indica el final de una palabra.
+          inWord = false;
+        } else if (!inWord) {
+          // Si no estamos en una palabra y encontramos un carácter no espaciado, contamos una nueva palabra.
+          wordCount++;
+          inWord = true;
+        }
+      }
+
+      return wordCount;
     }
   },
 
+  // Método para contar caracteres en un texto
   getCharacterCount(text) {
+    // Si el texto existe, retorna su longitud
     if (text) {
       return text.length;
     } else {
@@ -18,68 +46,83 @@ const analyzer = {
     }
   },
 
+  // Método para contar caracteres excluyendo espacios en un texto
   getCharacterCountExcludingSpaces(text) {
+    // Si el texto existe
     if (text) {
-      let count = 0;
-      for (let i = 0; i < text.length; i++) {
-        if (text[i] !== ' ') {
-          count++;
-        }
-      }
-      return count;
+      // Limpia el texto de caracteres especiales
+      const cleanedText = text.replace(/[.,/#!$%^&*;:{}=\-_`~()?¿]/g, "");
+      // Elimina todos los espacios en blanco
+      const textWithoutSpaces = cleanedText.replace(/\s+/g, "");
+
+      // Retorna la longitud del texto sin espacios
+      return textWithoutSpaces.length;
     } else {
       return 0;
     }
   },
 
+  // Método para contar números en un texto
   getNumberCount(text) {
+    // Si el texto existe
     if (text) {
-      const numbersArray = text.match(/\d+/g);
+      // Encuentra y retorna la cantidad de números en el texto
+      const numbersArray = text.match(/\b\d+(\.\d+)?\b/g);
       return numbersArray ? numbersArray.length : 0;
     } else {
       return 0;
     }
   },
 
+  // Método para sumar números en un texto
   getNumberSum(text) {
-    if (text) {
-      const numbersArray = text.match(/\d+/g);
-      if (numbersArray) {
-        let sum = 0;
-        for (let i = 0; i < numbersArray.length; i++) {
-          sum += parseFloat(numbersArray[i]);
-        }
-        return sum;
-      } else {
-        return 0;
-      }
-    } else {
+    // Encuentra todos los números (enteros y decimales)
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
+
+    // Si no se encontraron números, retorna 0
+    if (numbers === null) {
       return 0;
     }
+
+    // Realiza la suma de los números
+    const sum = numbers.reduce((total, num) => {
+      const parsedNum = parseFloat(num);
+      // Verifica si el número es válido antes de sumarlo
+      if (!isNaN(parsedNum)) {
+        return total + parsedNum;
+      }
+      return total;
+    }, 0);
+
+    return sum;
   },
 
+  // Método para obtener la longitud promedio de las palabras en un texto
   getAverageWordLength(text) {
-    if (text) {
-      const words = text.trim().split(/\s+/);
-      const wordCount = words.length;
-      if (wordCount > 0) {
-        let totalWordLength = 0;
-        for (let i = 0; i < wordCount; i++) {
-          totalWordLength += words[i].length;
-        }
-        const wordLengthAverage = (totalWordLength / wordCount).toFixed(2);
-        return parseFloat(wordLengthAverage);
-      } else {
-        return 0;
-      }
-    } else {
+    // Limpia el texto de números
+    const textoLimpio = text.replace(/[0-9]/g, "");
+    // Elimina espacios en blanco al inicio y al final del texto
+    const textoSinEspacios = textoLimpio.trim();
+
+    // Si el texto está vacío, retorna 0
+    if (textoSinEspacios === "") {
       return 0;
+    } else {
+      // Limpia el texto de espacios en blanco
+      const palabrasSinEspacios = textoSinEspacios.replace(/\s+/g, "");
+      // Divide el texto en un array de palabras
+      const palabrasArray = textoSinEspacios.split(/\s+/g);
+
+      // Calcula la longitud promedio de las palabras
+      const longitudPromedio = palabrasSinEspacios.length / palabrasArray.length;
+
+      // Redondea la longitud promedio a dos decimales
+      const longitudRedondeada = parseFloat(longitudPromedio.toFixed(2));
+
+      return longitudRedondeada;
     }
   },
 };
 
-
-
-
+// Exporta el objeto 'analyzer' para poder usarlo en otros archivos
 export default analyzer;
-
