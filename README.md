@@ -18,7 +18,7 @@
 
 ## 1. Introducción
 
-Bienvenidos a la Aplicacion Web Analizador de Texto, una herramienta diseñada para facilitar tareas específicas. En este README, comprenderas cómo usar la aplicación, su funcionalidad principal y algunas decisiones de diseño clave que tome durante su desarrollo.
+En este proyecto, he creado una aplicación web que te permitirá analizar un texto directamente en tu navegador. Con esta aplicación, podrás ingresar cualquier texto de tu elección, y a partir de ahí, se generarán una serie de indicadores y métricas específicas relacionadas con caracteres, letras, números y más. He desarrollado esta herramienta utilizando las tecnologías esenciales de la web, como HTML, CSS y JavaScript."
 
 ## 2. Preámbulo
 
@@ -81,7 +81,7 @@ resultado en tiempo real a medida que la usuaria escribe su texto:
 3. La aplicación debe permitir limpiar el contenido de la caja de texto haciendo
 clic en un botón.
 
-![Text analyzer demo](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Text analyzer demo")
+![Text analyzer demo](https://github.com/saraAdelaSaldarriagaRomero/DEV012-text-analyzer/blob/70ecc339cfcc1f277f5c2b2a8f2949be51a4936b/Analizador%20de%20texto%20-%20Google%20Chrome%202023-09-26%2015-52-53.mp4 "Text analyzer demo")
 
 ## 5. Boilerplate
 
