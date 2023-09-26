@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Consideraciones generales](#1-consideraciones-generales)
+* [1. Introducción](#1-Introducción)
 * [2. Preámbulo](#2-preámbulo)
 * [3. Resumen del proyecto](#3-resumen-del-proyecto)
 * [4. Funcionalidades](#4-funcionalidades)
@@ -16,14 +16,9 @@
 
 ***
 
-## 1. Consideraciones generales
+## 1. Introducción
 
-* Este proyecto lo resolvemos de manera **individual**.
-* El rango de tiempo estimado para completar el proyecto es de 1 a 3 Sprints.
-* Enfócate en aprender y no solamente en "completar" el proyecto.
-* Te sugerimos que no intentes saberlo todo antes de empezar a codear.
-  No te preocupes demasiado ahora por lo que _todavía_ no entiendas.
-  Irás aprendiendo.
+Bienvenidos a la Aplicacion Web Analizador de Texto, una herramienta diseñada para facilitar tareas específicas. En este README, comprenderas cómo usar la aplicación, su funcionalidad principal y algunas decisiones de diseño clave que tome durante su desarrollo.
 
 ## 2. Preámbulo
 
