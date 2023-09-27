@@ -81,7 +81,7 @@ resultado en tiempo real a medida que la usuaria escribe su texto:
 3. La aplicación debe permitir limpiar el contenido de la caja de texto haciendo
 clic en un botón.
 
-![Text analyzer demo](https://github.com/saraAdelaSaldarriagaRomero/DEV012-text-analyzer/blob/70ecc339cfcc1f277f5c2b2a8f2949be51a4936b/Analizador%20de%20texto%20-%20Google%20Chrome%202023-09-26%2015-52-53.mp4 "Text analyzer demo")
+![Text analyzer demo] "Text analyzer demo"
 
 ## 5. Boilerplate
 
