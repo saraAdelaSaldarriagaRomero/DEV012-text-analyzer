@@ -1,0 +1,78 @@
+/* Estilo para el header */
+header {
+  background-color: #25e9f7; /* Fondo azul claro */
+  color: #fa089d; /* Texto de color rosa */
+  text-align: center; /* Centra el texto */
+  padding: 5px; /* Agrega un poco de espacio alrededor del contenido */
+  font-size: 35px; /* Tamaño grande de fuente */
+}
+
+img {
+  width: 100px; /* Tamaño de la imagen */
+  float: left; /* Coloca la imagen a la izquierda */
+  margin-right: 10px; /* Espacio entre la imagen y el encabezado */
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de fuente para el encabezado principal */
+}
+
+p {
+  font-family: cursive; /* Tipo de fuente estilo cursiva */
+  font-size: 20px; /* Tamaño de fuente más grande para el párrafo */
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #25e9f7; /* Fondo azul claro */
+  color: rgb(100, 89, 89); /* Texto color marrón-grisáceo */
+  text-align: right; /* Alinea el texto a la derecha */
+  padding: 10px; /* Espacio alrededor del contenido del pie de página */
+  margin-top: 10px; /* Espacio en la parte superior del pie de página */
+}
+
+/* Estilo para los elementos li dentro de ul */
+.metric-item {
+  background-color: #f2f2f2; /* Fondo gris claro */
+  border: 1px solid #ccc; /* Borde con color gris claro */
+  margin: 10px; /* Espacio alrededor de los elementos */
+  padding: 10px; /* Espacio interno en los elementos */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
+  display: inline-block; /* Muestra los elementos en línea (en dos columnas) */
+  width: calc(33.33% - 10px); /* Calcula el ancho para tres columnas con margen */
+  box-sizing: border-box; /* Incluye el relleno (padding) en el ancho total */
+  margin-left: 170px; /* Agrega espacio a la izquierda */
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de fuente */
+  font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilo para el textarea usando el atributo name */
+textarea[name="user-input"] {
+  width: 1240px; /* Ancho del textarea */
+  height: 150px; /* Altura del textarea */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #7a7373; /* Borde con color gris oscuro */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
+  margin: 50px auto; /* Margen superior e inferior, centrado horizontalmente */
+  margin-right: 200px; /* Margen derecho */
+  margin-left: 200px; /* Margen izquierdo */
+}
+
+/* Estilo para el botón con el atributo id "reset-button" */
+#reset-button {
+  background-color: #fa089d; /* Fondo rosa */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno en la parte superior/izquierda y derecha */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  margin: 0 auto; /* Centra horizontalmente */
+  border-radius: 40px; /* Bordes redondeados para un aspecto circular */
+  display: block; /* Asegura que ocupe todo el ancho disponible */
+  font-size: 30px; /* Tamaño de fuente grande */
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de fuente */
+}
+
+/* Cambia el color del botón cuando se pasa el ratón */
+#reset-button:hover {
+  background-color: #e679af; /* Cambia a un tono más oscuro de rosa cuando se pasa el ratón */
+}
