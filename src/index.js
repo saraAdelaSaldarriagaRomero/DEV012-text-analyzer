@@ -3,7 +3,7 @@ import analyzer from "./analyzer.js";
 
 // Escuchar Eventos del DOM
 const textarea = document.querySelector("textarea");// Selecciona el primer elemento <textarea> en el documento HTML actual
-const lis = document.querySelectorAll("li.metric-item");
+const lis = document.querySelectorAll ("li.metric-item");
 const resetButton = document.getElementById("reset-button");
 
 function updateMetrics() {

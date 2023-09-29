@@ -6,33 +6,32 @@ const analyzer = {
   // Método para contar palabras en un texto
   getWordCount(text) {
     // Elimina todos los números del texto
-    let array = text.replace(/[0-9]/g, "");
+    let cadena = text.replace(/[0-9]/g, "");
     // Elimina espacios en blanco al inicio y al final del texto
-    array = array.trim();
+    cadena = cadena.trim();
 
     // Si el texto está vacío, retorna 0
-    if (array === "") {
+    if (cadena === "") {
       return 0;
     } else {
       // Contador de palabras
-      let wordCount = 0;
+      let contarPalabra = 0;
       // Variable que indica si estamos dentro de una palabra
-      let inWord = false;
+      let enPalabra = false;
 
       // Iteramos sobre el texto
-      for (let i = 0; i < array.length; i++) {
-        const character = array[i];
+      for (let i = 0; i < cadena.length; i++) {
+        const character = cadena[i];// asigno el valor al caracter que este en la posisin i
         if (/\s/.test(character)) {
-          // Si encontramos un espacio, indica el final de una palabra.
-          inWord = false;
-        } else if (!inWord) {
+          enPalabra = false;// estamos en un espacio en blanco
+        } else if (!enPalabra) {
           // Si no estamos en una palabra y encontramos un carácter no espaciado, contamos una nueva palabra.
-          wordCount++;
-          inWord = true;
+          contarPalabra++;
+          enPalabra = true;
         }
       }
 
-      return wordCount;
+      return contarPalabra;
     }
   },
 
@@ -51,12 +50,12 @@ const analyzer = {
     // Si el texto existe
     if (text) {
       // Limpia el texto de caracteres especiales
-      const cleanedText = text.replace(/[.,/#!$%^&*;:{}=\-_`~()?¿]/g, "");
+      const textoLimpio = text.replace(/[.,/#!$%^&*;:{}=\-_`~()?¿]/g, "");
       // Elimina todos los espacios en blanco
-      const textWithoutSpaces = cleanedText.replace(/\s+/g, "");
+      const textoSinEspacios = textoLimpio.replace(/\s+/g, "");
 
       // Retorna la longitud del texto sin espacios
-      return textWithoutSpaces.length;
+      return textoSinEspacios.length;
     } else {
       return 0;
     }
@@ -67,8 +66,8 @@ const analyzer = {
     // Si el texto existe
     if (text) {
       // Encuentra y retorna la cantidad de números en el texto
-      const numbersArray = text.match(/\b\d+(\.\d+)?\b/g);
-      return numbersArray ? numbersArray.length : 0;
+      const contarNumeros = text.match(/\b\d+(\.\d+)?\b/g);
+      return contarNumeros ? contarNumeros.length : 0;
     } else {
       return 0;
     }

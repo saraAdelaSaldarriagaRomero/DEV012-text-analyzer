@@ -74,5 +74,5 @@ textarea[name="user-input"] {
 
 /* Cambia el color del botón cuando se pasa el ratón */
 #reset-button:hover {
-  background-color: #f7f309; /* Cambia a un tono más oscuro de rosa cuando se pasa el ratón */
+  background-color: #e679af; /* Cambia a un tono más oscuro de rosa cuando se pasa el ratón */
 }
