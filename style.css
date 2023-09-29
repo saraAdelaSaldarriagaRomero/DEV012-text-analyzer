@@ -48,7 +48,7 @@ footer {
 
 /* Estilo para el textarea usando el atributo name */
 textarea[name="user-input"] {
-  width: 1240px; /* Ancho del textarea */
+  width: 1000px; /* Ancho del textarea */
   height: 150px; /* Altura del textarea */
   padding: 10px; /* Espaciado interno */
   border: 1px solid #7a7373; /* Borde con color gris oscuro */
