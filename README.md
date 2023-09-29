@@ -78,11 +78,11 @@ clic en un botón.
 * **Uso de HTML semántico**
 
   En el archivo index.html estructure la pagina web en este caso la aplicacion Analizador de Texto, respetando su estructura basica, y dentro de la etiqueta body que es la que indica la parte visible del documento,lo maquete de la siguiente forma:
-  - Etiqueda header el encabezado de la pagina, dentro de esta puse una imagen<img> y el titulo <h1> .
-  - Un <textarea> es la caja de texto donde las usuarias van ha ingresar el texto que quieren analizar, a   este agregue un <placeholder> un texto indicador para la usuaria.
-  - Una lista no ordenada <ul> que contiene 6 item o hijos <li> utilizados con el fin de mostrar cada      metrica.
-  - Un boton con la etiquta <button> que permite a las usuarias mediante un clic, limpiar el contenido de  texto.
-  -un pie de pagina <footer> donde dentro de una etiqueta <p> escribi mi nombre como desarrolladora de la aplicacion.
+  * Etiqueda header el encabezado de la pagina, dentro de esta puse una imagen<img> y el titulo <h1> .
+  * Un <textarea> es la caja de texto donde las usuarias van ha ingresar el texto que quieren analizar, a   este agregue un <placeholder> un texto indicador para la usuaria.
+  * Una lista no ordenada <ul> que contiene 6 item o hijos <li> utilizados con el fin de mostrar cada      metrica.
+  * Un boton con la etiquta <button> que permite a las usuarias mediante un clic, limpiar el contenido de  texto.
+  * Un pie de pagina <footer> donde dentro de una etiqueta <p> escribi mi nombre como desarrolladora de la aplicacion.
 
   A algunas de estas etiquetas les agregue indicadores de elementos como atributos, id, clases con su respetivo valor con el fin de identificarlos, personalizar su estilo, asi como llamarlos y darles uso en java script. 
   
